@@ -20,11 +20,7 @@ namespace MaternityDepartment
 
         public void ShowSalery(string id, Dictionary<string, double> employeeSaleryDict)
         {
-            
-            if (!employeeSaleryDict.ContainsKey(id))
-                Console.WriteLine("this employee don't exit in the system");
             Console.WriteLine(employeeSaleryDict[id]);
-
         }
 
 

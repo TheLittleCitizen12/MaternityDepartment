@@ -89,12 +89,18 @@ namespace MaternityDepartment
             DateTime resultStartShift;
             DateTime.TryParse(start, out resultStartShift);
 
+
             DateTime resultEndShift;
             DateTime.TryParse(end, out resultEndShift);
 
+           
             TimeSpan difference = resultEndShift - resultStartShift;
-
+            
             double sum = (double)difference.TotalHours;
+            if(sum < 0)
+            {
+                sum += 24;
+            }
             return sum;
         }
 
